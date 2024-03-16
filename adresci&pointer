@@ -1,0 +1,26 @@
+#include <iostream> 
+#include <stdio.h>
+using namespace std;
+int main() {
+	int sayi1, sayi2, sayi3;
+	cout << "uc sayi giriniz"<<endl;
+	cin >> sayi1;
+	cin >> sayi2;
+	cin >> sayi3;
+	int* ptr = &sayi1;
+	int* ptr2 = &sayi2;
+	int* ptr3 = &sayi3;
+
+	cout << "SAYI1:" <<endl<< ptr << endl << *ptr << endl << sayi1 << endl << &sayi1 << endl;
+	cout << "SAYI2:" <<endl<< ptr << endl << *ptr << endl << sayi1 << endl << &sayi1 << endl;
+	cout << "SAYI3:" <<endl<< ptr << endl << *ptr << endl << sayi1 << endl << &sayi1 << endl;
+
+
+
+
+
+
+
+		return 0;
+
+}
