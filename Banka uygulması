@@ -1,0 +1,100 @@
+#include <iostream>
+#include <stdio.h>
+#include <locale.h>
+
+using namespace std;
+int bakiye=0, yatır, cek;                               //önceden giriş yapılan kullanıcı
+string kullanıcıAdı="efe", parola = "123";
+
+
+void sistem(){ //programın bankacılık işlemleri bölümü
+		 
+			string kontrolKullanıcı;
+			string kontrolParola;
+			cout << "Kullanıcı Adı Giriniz" << endl;
+			cin >> kontrolKullanıcı;
+			cout << "Parola Giriniz" << endl;
+			cin >> kontrolParola;
+
+			if (kontrolParola == parola && kullanıcıAdı == kontrolKullanıcı) {   //eşleşmeyi kontrol eder
+				system("cls");
+				for (;;) {
+
+
+					int giriş2;
+					cout << "1 Para Yatır" << endl << "2 Para Çek" << endl << "3 Bakiye Görüntüle" << endl << "4 çıkış" << endl<<"5 Menü"<<endl;
+					cin >> giriş2;
+
+
+
+					switch (giriş2) {
+
+					case 1:
+						cout << "Yatırılacak Miktarı Giriniz" << endl;
+						cin >> yatır;
+						
+						if (yatır <= 0) {
+							cout << "Bu Miktar Girilemez";
+						}
+						bakiye = bakiye + yatır;
+						break;
+					case 2:
+						cout << "Çekilecek Para Miktarını Giriniz" << endl;
+						cin >> cek;
+					
+						if (cek <= 0) {
+							cout << "Bu Miktar Çekilemez" << endl;
+						}
+						else if (cek > yatır) {
+							cout << "bu miktar cekılemez" << endl;
+						}
+						bakiye = bakiye - cek;
+
+						break;
+					case 3:
+						cout << "Bakiyeniz:" << bakiye << endl;
+						
+
+						break;
+					case 4:
+						exit(0);
+						break;
+					
+					case 5:
+						sistem();
+
+
+					}
+				}
+			}
+		    else {
+				cout << "kullanıcı adı veya sıfre yanlıs";
+			}
+}
+int main() { //programın menüsü
+	setlocale(LC_ALL, "Turkish");
+	int giriş1;
+	cout <<"bankamıza hoşgeldiniz"<<endl<<"Yeni Hesap Oluştur(10)" << endl << " hesabın varmı ? devam et(20)"<<endl;
+	cin >> giriş1;
+	system("cls");
+	if (giriş1 == 10) {
+		cout << "Kullanıcı Adı Giriniz"<<endl;
+		cin >> kullanıcıAdı;
+		cout << "Parola Giriniz" << endl;
+		cin >> parola;
+		cout << "hesap oluşturuldu" << endl;
+		system("pause");
+		
+		system("cls");
+		sistem();
+		
+	}
+	else if (giriş1 == 20) {
+		system("cls");
+		sistem();
+	}
+	else {
+		cout << "sistemde böyle bir giriş yok";
+
+	}
+}
