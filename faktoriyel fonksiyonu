@@ -1,0 +1,20 @@
+#include <iostream>
+#include <locale.h>
+using namespace std;
+int faktoriyel(int deger) {
+	int faktoriyel = 1;
+
+	for (int sayac = 1; sayac <= deger; sayac++) {
+		faktoriyel = sayac*faktoriyel ;
+		cout << faktoriyel<<endl;
+		
+	}
+
+
+	return faktoriyel;
+
+}
+int main() {
+	int sayi;
+	faktoriyel(8); // parantez içindeki sayıya kadar faktoriyel hesaplat
+}
