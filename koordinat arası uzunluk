@@ -1,0 +1,36 @@
+#include <iostream> 
+#include <string.h>
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+#pragma warning (disable:4996)
+using namespace std;
+	
+
+	
+int main()
+{
+	setlocale(LC_ALL, "Turkish");
+	int A1, B1, A2, B2; 
+	
+	
+		cout << "Lütfen ilk noktanın x'ini giriniz: ";
+
+		cin >> A1;
+
+		cout << "Lütfen ilk noktanın y'sini giriniz: ";
+
+		cin >> B1;
+
+		cout << "Lütfen ikinci noktanın x'ini giriniz: ";
+
+		cin >> A2;
+
+		cout << "Lütfen ikinci noktanın y'sini giriniz: ";
+
+		cin >> B2;
+
+		cout << "İki nokta arasındaki uzunluk : " << sqrt(pow((A1 - A2),2)  + pow((B1 - B2),2) ) << endl;
+
+
+}
