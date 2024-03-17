@@ -1,0 +1,14 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main() {
+	int sayi1, sayi2;
+	cout << "gir sayi1" << endl;
+	cin >> sayi1;
+	cout << "gir sayi2" << endl;
+	cin >> sayi2;
+	cout << pow(sayi1, sayi2) << endl; //sayi1 üzeri sayi2 hesaplanır
+	cout << sqrt(sayi1)<<endl; //sayi1 in karekökü
+	cout << sqrt(sayi2)<<endl; //sayi2 nin karekökü
+
+}
