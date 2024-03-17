@@ -1,0 +1,48 @@
+#include <iostream>
+#include <stdio.h>
+#include <locale.h>
+using namespace std;
+string a, b, c, d, e, f;
+
+void kullanıcıEkle() {
+	
+	cout << "isim gir:" << endl;
+	cin >> a;
+	cout << "soyad gir:" << endl;
+	cin >> b;
+	cout << "tc gir:" << endl;
+	cin >> c;
+	cout << "okul no gir:" << endl;
+	cin >> d;
+	cout << "tel gir:" << endl;
+	cin >> e;
+	cout << "mail gir:" << endl;
+	cin >> f;
+	
+}
+void kullanıcıGörüntüle() {
+	cout << "isim:" << a << endl;
+	cout << "soy isim:" << b << endl;
+	cout << "tc:" << c << endl;
+	cout << "okul no:" << d << endl;
+	cout << "tel:" << e << endl;
+	cout << "mail:" << f << endl;
+
+
+}
+int main() {
+	for (;;) {
+		setlocale(LC_ALL, "Turkish");
+		cout << "1 Kullanıcı Ekle" << endl << "2 Kullanıcı Görüntüle" << endl;
+		int giriş;
+		cin >> giriş;
+		if (giriş == 1) {
+			kullanıcıEkle();
+
+		}
+		else if (giriş == 2) {
+
+			kullanıcıGörüntüle();
+		}
+	}
+}
