@@ -1,0 +1,33 @@
+#include <iostream>
+#include <stdio.h>
+#include <locale.h>
+#include <string>
+#include <fstream>
+#pragma warning (disable:4996)
+using namespace std;
+
+int main() {
+	ofstream sayılar;
+	sayılar.open("sayılar.txt");
+	sayılar << "0 1 2 3 4 5 6 7 8 9";
+	sayılar.close();
+int rakam;
+	ofstream yazdır;
+	ofstream yazdır2;
+	yazdır.open("çift.txt");
+	yazdır2.open("tek.txt");
+	ifstream oku;
+	oku.open("sayılar.txt");
+	while (oku >> rakam) {
+		if (rakam % 2 == 0) {
+			yazdır << rakam << " ";
+		}
+		else {
+			yazdır2 << rakam << " ";
+		}
+	}
+	oku.close();
+	yazdır.close();
+	yazdır2.close();
+}
+	
