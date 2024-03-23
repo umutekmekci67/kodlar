@@ -1,0 +1,38 @@
+#include <iostream>
+#include <stdio.h>
+#include <locale.h>
+#include <string>
+#pragma warning (disable:4996)
+
+using namespace std;
+struct ogrenci {
+	string ad, soyad;
+	int numara, yas;
+};
+int main() {
+	const int max=2;
+	
+	ogrenci kisi[max];
+	for (int i = 0; i < max; i++) {
+		setlocale(LC_ALL, "Turkish");
+		
+		
+		
+		cout << "adınızı girin" << endl;
+		cin >> kisi[i].ad;
+		cout << " soyadınızı girin" << endl;
+		cin >> kisi[i].soyad;
+		cout << "numara girin" << endl;
+		cin >> kisi[i].numara;
+		cout << "yas girin" << endl;
+		cin >> kisi[i].yas;
+		
+	}for (int i = 0; i < max; i++) {
+		
+		cout << "ad:"  << kisi[i].ad << endl;
+		cout << "soyad:"  << kisi[i].soyad << endl;
+		cout << "numara:"  << kisi[i].numara << endl;
+		cout << "yas:" <<  kisi[i].yas << endl;
+	}
+	
+}
