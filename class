@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+using namespace std;
+class Araba {
+private:
+	string marka;
+	string model;
+	string renk;
+	int üretimyili;
+
+public:
+	void modelayarla(string model) {
+		this->model = model;
+	}void renkayarla(string renk) {
+		this->renk = renk;
+	}void markaayarla(string marka) {
+		this->marka = marka;
+	}void yılayarla(int üretimyili) {
+		this->üretimyili = üretimyili;
+	}
+ void bilgileriyazdir(Araba araba) {
+	cout << "arabanın markası:" << araba.marka << endl;
+	cout << "arabanın modeli:" << araba.model << endl;
+	cout << "arabanın rengi:" << araba.renk << endl;
+	cout << " arabanın üretim yılı:" <<araba.üretimyili<< endl;
+
+
+
+ }
+}; int main() {
+
+	Araba araba;
+	araba.markaayarla  ("audi");
+	araba.modelayarla  ("a4");
+	araba.renkayarla("siyah");
+	araba.yılayarla ( 2023);
+	araba.bilgileriyazdir(araba);
+}
